@@ -4,7 +4,22 @@
       "value": "#14ff00",
       "type": "color"
     },
-    "button-primary": {
+    "button-text-primary-color": {
+      "value": "#ffffff",
+      "type": "color",
+      "description": "button text primary color"
+    },
+    "button-secondary-color": {
+      "value": "#e16767",
+      "type": "color",
+      "description": "button secondary color"
+    },
+    "button-text-secondary-color": {
+      "value": "#000000",
+      "type": "color",
+      "description": "button text secondary color"
+    },
+    "button-primary-color": {
       "value": "#3337a6",
       "type": "color",
       "description": "button primary color"
