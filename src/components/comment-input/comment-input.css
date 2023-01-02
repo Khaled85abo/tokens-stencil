@@ -1,0 +1,65 @@
+.comment-input {
+  display: flex;
+  padding-bottom: 1rem;
+  /* overflow: hidden; */
+}
+.comment-input > img {
+  height: 45px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 100%;
+  margin-right: 1rem;
+}
+button {
+  border: none;
+}
+
+.comment-input > form {
+  width: 100%;
+}
+.comment-input > input:focus {
+  border: 2px solid var(--button-primary);
+}
+
+.comment-input > input::placeholder {
+  font-size: 20px;
+}
+
+.input-wrapper {
+  background-color: #fff;
+  display: inline;
+  position: relative;
+}
+
+.input-wrapper > input {
+  font-size: 20px;
+  border: 2px solid #8d8d8d;
+  border-radius: 8px;
+  height: 45px;
+  padding-left: 2px;
+  padding-right: 3rem;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  position: relative;
+}
+
+.forward-arrow-div {
+  position: absolute;
+  right: 3px;
+  top: -52%;
+  padding: 0.45rem;
+  border-radius: 7px;
+  display: flex;
+  background-color: var(--button-primary);
+}
+.i-arrow-forward::before {
+  content: '';
+  padding: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='19' height='19' viewBox='0 0 19 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.982137 0.0716776C0.868541 0.0148625 0.74128 -0.00893147 0.614831 0.00300232C0.488381 0.0149361 0.367818 0.0621186 0.266857 0.139183C0.165896 0.216247 0.0885899 0.320099 0.0437318 0.438925C-0.00112628 0.557752 -0.0117353 0.686783 0.0131116 0.81134L1.91723 7.39366C1.95274 7.51632 2.02213 7.62648 2.11745 7.71147C2.21276 7.79646 2.33012 7.85283 2.45603 7.8741L10.1784 9.16749C10.5421 9.23942 10.5421 9.76058 10.1784 9.83251L2.45603 11.1259C2.33012 11.1472 2.21276 11.2035 2.11745 11.2885C2.02213 11.3735 1.95274 11.4837 1.91723 11.6063L0.0131116 18.1887C-0.0117353 18.3132 -0.00112628 18.4422 0.0437318 18.5611C0.0885899 18.6799 0.165896 18.7838 0.266857 18.8608C0.367818 18.9379 0.488381 18.9851 0.614831 18.997C0.74128 19.0089 0.868541 18.9851 0.982137 18.9283L18.6255 10.1067C18.738 10.0502 18.8327 9.96362 18.8988 9.85648C18.965 9.74934 19 9.62591 19 9.5C19 9.37409 18.965 9.25066 18.8988 9.14352C18.8327 9.03638 18.738 8.94976 18.6255 8.89334L0.982137 0.0716776Z' fill='white'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.4rem;
+}
