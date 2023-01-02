@@ -1,0 +1,14 @@
+{
+  "global": {
+    "background-color": {
+      "value": "#14ff00",
+      "type": "color"
+    }
+  },
+  "$themes": [],
+  "$metadata": {
+    "tokenSetOrder": [
+      "global"
+    ]
+  }
+}
