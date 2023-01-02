@@ -3,6 +3,11 @@
     "background-color": {
       "value": "#14ff00",
       "type": "color"
+    },
+    "button-primary": {
+      "value": "#3337a6",
+      "type": "color",
+      "description": "button primary color"
     }
   },
   "$themes": [],
