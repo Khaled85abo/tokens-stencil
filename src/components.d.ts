@@ -27,6 +27,17 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface MyTab {
+        "active": boolean;
+        "name": string;
+    }
+    interface MyTabs {
+        "activeTab": string;
+    }
+}
+export interface MyTabCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLMyTabElement;
 }
 declare global {
     interface HTMLCommentInputElement extends Components.CommentInput, HTMLStencilElement {
@@ -47,10 +58,24 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLMyTabElement extends Components.MyTab, HTMLStencilElement {
+    }
+    var HTMLMyTabElement: {
+        prototype: HTMLMyTabElement;
+        new (): HTMLMyTabElement;
+    };
+    interface HTMLMyTabsElement extends Components.MyTabs, HTMLStencilElement {
+    }
+    var HTMLMyTabsElement: {
+        prototype: HTMLMyTabsElement;
+        new (): HTMLMyTabsElement;
+    };
     interface HTMLElementTagNameMap {
         "comment-input": HTMLCommentInputElement;
         "custom-button": HTMLCustomButtonElement;
         "my-component": HTMLMyComponentElement;
+        "my-tab": HTMLMyTabElement;
+        "my-tabs": HTMLMyTabsElement;
     }
 }
 declare namespace LocalJSX {
@@ -75,10 +100,20 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface MyTab {
+        "active"?: boolean;
+        "name"?: string;
+        "onTabActivate"?: (event: MyTabCustomEvent<{ name: string }>) => void;
+    }
+    interface MyTabs {
+        "activeTab"?: string;
+    }
     interface IntrinsicElements {
         "comment-input": CommentInput;
         "custom-button": CustomButton;
         "my-component": MyComponent;
+        "my-tab": MyTab;
+        "my-tabs": MyTabs;
     }
 }
 export { LocalJSX as JSX };
@@ -88,6 +123,8 @@ declare module "@stencil/core" {
             "comment-input": LocalJSX.CommentInput & JSXBase.HTMLAttributes<HTMLCommentInputElement>;
             "custom-button": LocalJSX.CustomButton & JSXBase.HTMLAttributes<HTMLCustomButtonElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "my-tab": LocalJSX.MyTab & JSXBase.HTMLAttributes<HTMLMyTabElement>;
+            "my-tabs": LocalJSX.MyTabs & JSXBase.HTMLAttributes<HTMLMyTabsElement>;
         }
     }
 }

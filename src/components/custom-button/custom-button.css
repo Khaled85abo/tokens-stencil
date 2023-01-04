@@ -1,4 +1,5 @@
 .button {
+  color: var(--figma-button-text-primary-color);
   padding: 0.5rem 1rem;
-  background-color: var(--happy-color);
+  background-color: var(--figma-buttons-background-normal-default-primary);
 }

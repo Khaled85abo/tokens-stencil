@@ -6,7 +6,7 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: false,
 })
 export class Button {
-  @Prop() text: string = 'Default';
+  @Prop() text: string = 'Click';
   render() {
     return <button class="button">{this.text}</button>;
   }

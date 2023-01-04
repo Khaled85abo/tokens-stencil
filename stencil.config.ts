@@ -2,7 +2,7 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'stencil-tokens',
-  globalStyle: 'src/global/app.css',
+  globalStyle: 'src/global/variables.css',
   outputTargets: [
     {
       type: 'dist',

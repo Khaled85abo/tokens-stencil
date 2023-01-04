@@ -9,8 +9,19 @@
     <script nomodule src="/build/stencil-tokens.js"></script>
   </head>
   <body>
-    <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+    <my-component first="Stencil" last="'Don't call me a ' JS"></my-component>
     <custom-button text="Add to cart"></custom-button>
     <comment-input></comment-input>
+    <my-tabs active-tab="Home">
+      <my-tab name="Home">Home</my-tab>
+      <my-tab name="Profile">Profile</my-tab>
+      <my-tab name="About-us">About Us</my-tab>
+    </my-tabs>
   </body>
+  <script>
+    function handleTabActivate(e) {
+      console.log(e.detail.name);
+    }
+    document.addEventListener('tabActivate', handleTabActivate);
+  </script>
 </html>

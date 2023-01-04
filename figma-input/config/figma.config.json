@@ -1,0 +1,16 @@
+{
+  "source": ["./figma-input/figma-input.json"],
+  "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "src/global/",
+      "prefix": "figma",
+      "files": [
+        {
+          "destination": "variables.css",
+          "format": "css/variables"
+        }
+      ]
+    }
+  }
+}

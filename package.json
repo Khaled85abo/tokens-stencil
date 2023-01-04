@@ -19,6 +19,8 @@
     "loader/"
   ],
   "scripts": {
+    "token:transform": "npx token-transformer figma-input/tokens-output.json figma-input/figma-input.json --resolveRefernce false --expandTypography",
+    "token:build": "npx style-dictionary build --config figma.config.cjs",
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
@@ -26,7 +28,9 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^2.13.0"
+    "@stencil/core": "^2.13.0",
+    "style-dictionary": "^3.7.1",
+    "token-transformer": "^0.0.28"
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
