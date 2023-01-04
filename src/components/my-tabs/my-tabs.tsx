@@ -1,5 +1,17 @@
 import { Component, h, Listen, Element, Prop, Watch } from '@stencil/core';
 
+const colors = {
+  green: 'green',
+  blue: 'blue',
+} as const;
+
+type ColorsType = typeof colors[keyof typeof colors];
+const logColors = (color: ColorsType): void => {
+  console.log(color);
+};
+
+logColors(colors.green);
+
 @Component({
   scoped: true,
   tag: 'my-tabs',
